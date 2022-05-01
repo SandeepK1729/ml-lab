@@ -40,7 +40,7 @@ cm_df = pd.DataFrame(cm,
                      )
 
 sns.heatmap(cm_df, annot=True)
-plt.title('Accuracy using brute:{0:.3f}'.format(accuracy_score(y_test, y_pred)))
+plt.title('Confusion Matrix for Optimal KNN ( Brute Force )')
 plt.ylabel('Actual label')
 plt.xlabel('Predicted label')
 plt.show()
