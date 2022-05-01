@@ -14,7 +14,7 @@ X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test
 
 cv_scores = []
 neighbors = list(np.arange(3,50,2))
-print(neighbors)
+
 for n in neighbors:
     knn = KNeighborsClassifier(n_neighbors = n,algorithm = 'brute')
     
@@ -25,8 +25,8 @@ error = [1-x for x in cv_scores]
 optimal_n = neighbors[ error.index(min(error)) ]
 knn_optimal = KNeighborsClassifier(n_neighbors = optimal_n,algorithm = 'brute')
 knn_optimal.fit(X_train,y_train)
-pred = knn_optimal.predict(X_test)
-acc = accuracy_score(y_test,pred) * 100
+y_pred = knn_optimal.predict(X_test)
+acc = accuracy_score(y_test,y_pred) * 100
 
 print("The accuracy for optimal k = {0} using brute is {1}".format(optimal_n,acc))
 # print("classification_report using brute force")
