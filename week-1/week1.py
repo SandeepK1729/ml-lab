@@ -22,6 +22,9 @@ for i in range(k):
 
     value.append(accuracy)
     
-print("average of the model",(sum(value))/len(value))
-plt.bar( range(k),value)
+print("average accuracy of the model is ", sum(value) / k)
+plt.title("Accuracies Of Naive Bayesian")
+plt.bar(range(1, k + 1),value)
+
 plt.show()
+
