@@ -14,7 +14,7 @@ X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test
 
 cv_scores = []
 neighbors = list(np.arange(3,50,2))
-
+ 
 for n in neighbors:
     knn = KNeighborsClassifier(n_neighbors = n,algorithm = 'brute')
     
