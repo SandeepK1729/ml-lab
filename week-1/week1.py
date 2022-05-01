@@ -3,7 +3,6 @@ import pandas as pd
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.model_selection import train_test_split
-
 import matplotlib.pyplot as plt
 
 wine = pd.read_csv("wine.csv")
