@@ -11,7 +11,8 @@ X = wine[["Alcohol","Malic.acid","Ash","Acl","Mg","Phenols","Flavanoids","Nonfla
 y = wine["Wine"]
 
 value=[]
-for i in range(4):
+k = 5
+for i in range(k):
     x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
 
     gnb = GaussianNB()
@@ -23,5 +24,5 @@ for i in range(4):
     
 # value.append((sum(value))/len(value))
 print("average of the model",(sum(value))/len(value))
-plt.bar([0,1,2,3],value)
+plt.bar( range(k),value)
 plt.show()
