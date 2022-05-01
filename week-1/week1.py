@@ -13,7 +13,7 @@ y = wine["Wine"]
 value=[]
 k = 5
 for i in range(k):
-    x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+    x_train, x_test, y_train, y_test = train_test_split(X, y, test_size= 1 / k)
 
     gnb = GaussianNB()
     gnb.fit(x_train, y_train)
