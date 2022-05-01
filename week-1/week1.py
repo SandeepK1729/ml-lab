@@ -22,7 +22,6 @@ for i in range(k):
 
     value.append(accuracy)
     
-# value.append((sum(value))/len(value))
 print("average of the model",(sum(value))/len(value))
 plt.bar( range(k),value)
 plt.show()
