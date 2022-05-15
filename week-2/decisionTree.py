@@ -3,7 +3,8 @@ import numpy as np
 from sklearn.datasets import load_iris
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier, export_graphviz
+import graphviz
 
 # loading dataset
 iris = load_iris()
@@ -21,3 +22,14 @@ y_pred = dtc.predict(X_test)
 # finding the accuracy
 acc = accuracy_score(y_test, y_pred)
 print(acc)
+
+dot_data = export_graphviz(
+    dtc, 
+    out_file = None,
+    feature_names = iris.feature_names,
+    class_names = iris.target_names,
+    filled = True
+)
+
+graph = graphviz.Source(dot_data, format = 'png')
+graph
