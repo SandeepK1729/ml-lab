@@ -5,9 +5,9 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
-wine = pd.read_csv("wine.csv")
-X = wine[["Alcohol","Malic.acid","Ash","Acl","Mg","Phenols","Flavanoids","Nonflavanoid.phenols","Proanth","Color.int","Hue","OD","Proline"]]
-y = wine["Wine"]
+wine = pd.read_csv("../csv_datasets/wine.csv")
+y = wine['Wine']
+X = wine.drop('Wine', axis = 1)
 
 value=[]
 k = 5
