@@ -1,0 +1,5 @@
+https://keras.io/api/layers/core_layers/dense/#:~:text=Dense%20class&text=Dense%20implements%20the%20operation%3A%20output,applicable%20if%20use_bias%20is%20True%20).
+
+https://www.tensorflow.org/tutorials/keras/save_and_load
+
+https://www.geeksforgeeks.org/save-and-load-models-in-tensorflow/
